@@ -1,0 +1,67 @@
+# # Welcome to GraphiQL
+# #
+# # GraphiQL is an in-browser tool for writing, validating, and
+# # testing GraphQL queries.
+# #
+# # Type queries into this side of the screen, and you will see intelligent
+# # typeaheads aware of the current GraphQL type schema and live syntax and
+# # validation errors highlighted within the text.
+# #
+# # GraphQL queries typically start with a "{" character. Lines that start
+# # with a # are ignored.
+# #
+# # An example GraphQL query might look like:
+# #
+# #     {
+# #       field(arg: "value") {
+# #         subField
+# #       }
+# #     }
+# #
+# # Keyboard shortcuts:
+# #
+# #  Prettify Query:  Shift-Ctrl-P (or press the prettify button above)
+# #
+# #     Merge Query:  Shift-Ctrl-M (or press the merge button above)
+# #
+# #       Run Query:  Ctrl-Enter (or press the play button above)
+# #
+# #   Auto Complete:  Ctrl-Space (or just start typing)
+# #
+
+# # query{
+# #   events
+# # }
+
+# # mutation{
+# #   createEvent(name: "Sports")
+# # }
+
+
+# query {
+#   events {
+#     title
+#     price
+#   }
+# }
+
+# mutation{
+#   createEvent(eventInput: {title: "A test", description: "Does this work", price: 12.99, date:"'2025-02-25T08:15:30.668Z'" }) {
+#     title
+#     price
+#   }
+# }
+
+# mutation{
+#   createEvent(eventInput: {title: "Another event", description: "Does this work again", price: 20.99, date: "2025-02-25T09:07:48.927Z"}) {
+#     title
+#     _id
+#   }
+# }
+
+query{
+  events {
+    title
+    _id
+}
+}
