@@ -1,0 +1,66 @@
+# # query{
+# #   events{
+# #     creator{
+# # 			createdEvents{
+# #         title
+# #         _id
+# #       }
+# #     }
+# #   }
+# # }
+# # query{
+# #   events{
+# #     creator{
+# # 			email
+# #       createdEvents{
+# #         title
+# #         creator{
+# #           email
+# #         }
+# #       }
+# #     }
+# #   }
+# # }
+
+# # mutation{
+# #   createEvent(eventInput: {title: "Another Event", description: "This is another event", price: 50.99, date: "2025-02-26T07:15:22.337Z"}){
+# #     creator{
+# #       email
+# #     }
+
+# #   }
+# # }
+
+# query{
+#   events{
+#     date
+#     title
+#     creator{
+#       email
+#       createdEvents{
+#         title
+#       }
+#     }
+#   }
+# }
+
+
+# mutation{
+#   createUser(userInput: {email: "test2@test.com", password: "tester"}){
+#     _id
+#   }
+# }
+
+# mutation{
+#   createEvent(eventInput: {title: "Third event", description: "This is the third event", price: 140.55, date: "2025-02-26T08:06:13.416Z"}){
+#     title
+#   }
+# }
+query{
+  events{
+    title
+    creator{
+      email
+    }
+  }
+}
