@@ -1,0 +1,13 @@
+# mutation{
+#   createUser(userInput: {email: "test@test.com", password: "tester"}){
+#     email
+#     password
+#   }
+# }
+
+mutation {
+  createEvent(eventInput: {title: "testing", description: "This is a test", price: 12.99, date: "2025-02-26T06:36:14.424Z"}) {
+	title
+    description
+  	}
+}
