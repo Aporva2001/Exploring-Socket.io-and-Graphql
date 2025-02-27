@@ -1,0 +1,67 @@
+# # mutation{
+# #   createEvent(eventInput: {title: "After refractor", description: "This is the event after refractor", price: 100.85, date: "2025-02-26T09:28:44.870Z"}){
+# #     _id
+# #     creator{
+# #       email
+# #     }
+# #   }
+# # }
+
+# # query{
+# #   events{
+# #     title
+# #     creator{
+# #       email
+# #       createdEvents{
+# #         _id
+# #       }
+# #     }
+# #   }
+# # }
+
+# query{
+#   events{
+#     title
+# 		_id
+#   }
+# }
+
+# mutation{
+#   bookEvent(eventId: "67becbf140bda68d95e678ee"){
+#     _id
+#     user{
+#       email
+#     }
+#   }
+# }
+# mutation {
+#   cancelBooking(bookingId: "67bede6f30dcbb593123b212"){
+#     title
+#     _id
+#   }
+# }
+
+# query{
+#   events{
+#     date
+#   }
+# }
+
+# query{
+#   bookings{
+#     _id
+#     user{
+#       email
+#     }
+#   }
+# }
+
+query{
+  events{
+    _id
+    title
+    creator{
+      email
+    }
+  }
+}
